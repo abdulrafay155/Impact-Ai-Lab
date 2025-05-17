@@ -60,110 +60,104 @@
     <!-- Main Content -->
     <div>
         <!-- Latest News Section -->
-       <section class="section">
-  <div class="container">
-    <h2 class="section-title">Latest News</h2>
-    <div class="news-grid">
-      <div class="news-card">
-        <img src="/placeholder.svg?height=200&width=300" alt="News 1">
-        <div class="news-card-content">
-          <p class="date">January 15, 2023</p>
-          <h3>New Research Grant Awarded</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula.</p>
-          <a href="#" class="read-more">Read More</a>
-        </div>
-      </div>
-      <div class="news-card">
-        <img src="/placeholder.svg?height=200&width=300" alt="News 2">
-        <div class="news-card-content">
-          <p class="date">February 28, 2023</p>
-          <h3>Paper Accepted at Top Conference</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula.</p>
-          <a href="#" class="read-more">Read More</a>
-        </div>
-      </div>
-      <div class="news-card">
-        <img src="/placeholder.svg?height=200&width=300" alt="News 3">
-        <div class="news-card-content">
-          <p class="date">March 10, 2023</p>
-          <h3>New Lab Members Joined</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula.</p>
-          <a href="#" class="read-more">Read More</a>
-        </div>
-      </div>
-    </div>
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Latest News</h2>
+                <div class="news-grid">
+                    <div class="news-card">
+                        <img src="/placeholder.svg?height=200&width=300" alt="News 1">
+                        <div class="news-card-content">
+                            <p class="date">January 15, 2023</p>
+                            <h3>New Research Grant Awarded</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus
+                                hendrerit arcu sed erat molestie vehicula.</p>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <img src="/placeholder.svg?height=200&width=300" alt="News 2">
+                        <div class="news-card-content">
+                            <p class="date">February 28, 2023</p>
+                            <h3>Paper Accepted at Top Conference</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus
+                                hendrerit arcu sed erat molestie vehicula.</p>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <img src="/placeholder.svg?height=200&width=300" alt="News 3">
+                        <div class="news-card-content">
+                            <p class="date">March 10, 2023</p>
+                            <h3>New Lab Members Joined</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus
+                                hendrerit arcu sed erat molestie vehicula.</p>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
 
-    <!-- Additional Text Section -->
-<div class="additional-news">
-  <div class="news-item"><strong>News 4:</strong> Exciting new collaboration announced with industry leaders.</div>
-  <div class="news-item"><strong>News 5:</strong> Upcoming seminar on emerging technologies in our field.</div>
-  <div class="news-item"><strong>News 6:</strong> Recent publication featured in a prestigious journal.</div>
-  <div class="news-item"><strong>News 7:</strong> Lab hosts annual open day for prospective students and researchers.</div>
-</div>
+                <!-- Additional Text Section -->
+                <div class="additional-news">
+                    <div class="news-item"><strong>News 4:</strong> Exciting new collaboration announced with industry
+                        leaders.</div>
+                    <div class="news-item"><strong>News 5:</strong> Upcoming seminar on emerging technologies in our
+                        field.</div>
+                    <div class="news-item"><strong>News 6:</strong> Recent publication featured in a prestigious
+                        journal.</div>
+                    <div class="news-item"><strong>News 7:</strong> Lab hosts annual open day for prospective students
+                        and researchers.</div>
+                </div>
 
-  </div>
-</section>
+            </div>
+        </section>
+
 
 
 
         <!-- Archived News Section -->
-        <section class="section" style="background-color: #f0f4f8; padding: 2rem 1rem;">
+        <section class="section" style=" padding: 1rem; padding-bottom: 2rem;">
             <div class="container" style="max-width: 1200px; margin: 0 auto;">
-                <h2 class="section-title" >Archived News</h2>
+                <div class="archive-header"
+                    style="display: flex; justify-content: center; align-items: center; cursor: pointer; gap: 0.5rem;">
+                    <h2 class="section-title" style="text-align: center; margin: 0;">Archived News</h2>
+                    <i class="fas fa-plus archive-toggle-icon"></i>
+                </div>
 
-                <div class="publications-list" style="display: flex; flex-direction: column; gap: 0.5rem;">
+                <div class="publications-wrapper"
+                    style="overflow: hidden; transition: max-height 0.5s ease; max-height: 0;" id="archiveContent">
+                    <div class="publications-list"
+                        style="display: flex; flex-direction: column;">
 
-                    <!-- Publication Item -->
-                    <div class="publication-item"
-                        style="background: #fff; border-radius: 8px; padding: 1rem; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
-                        <div class="collapsible-header"
-                            style="display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+                        <!-- Publication Items -->
+                        <div class="publication-item"
+                            style="background: #fff; border-radius: 8px; padding: 1rem; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
                             <h3 style="margin: 0; font-size: 1.1rem;">Lab Receives Major Funding</h3>
-                            <i class="fas fa-plus toggle-icon"></i>
-                        </div>
-                        <div class="collapsible-content"
-                            style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease; padding-left: 0.25rem;">
                             <p class="date" style="margin: 0.75rem 0 0.25rem; font-weight: 500;">December 10, 2022</p>
                             <p style="margin: 0;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui
-                                mauris. Vivamus hendrerit arcu sed erat molestie vehicula.</p>
+                                mauris.</p>
                         </div>
-                    </div>
 
-                    <!-- Publication Item -->
-                    <div class="publication-item"
-                        style="background: #fff; border-radius: 8px; padding: 1rem; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
-                        <div class="collapsible-header"
-                            style="display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+                        <div class="publication-item"
+                            style="background: #fff; border-radius: 8px; padding: 1rem; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
                             <h3 style="margin: 0; font-size: 1.1rem;">New Research Collaboration Announced</h3>
-                            <i class="fas fa-plus toggle-icon"></i>
-                        </div>
-                        <div class="collapsible-content"
-                            style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease; padding-left: 0.25rem;">
                             <p class="date" style="margin: 0.75rem 0 0.25rem; font-weight: 500;">November 5, 2022</p>
                             <p style="margin: 0;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui
-                                mauris. Vivamus hendrerit arcu sed erat molestie vehicula.</p>
+                                mauris.</p>
                         </div>
-                    </div>
 
-                    <!-- Publication Item -->
-                    <div class="publication-item" id="aboutourlab"
-                        style="background: #fff; border-radius: 8px; padding: 1rem; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
-                        <div class="collapsible-header"
-                            style="display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+                        <div class="publication-item"
+                            style="background: #fff; border-radius: 8px; padding: 1rem; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
                             <h3 style="margin: 0; font-size: 1.1rem;">Lab Featured in National Media</h3>
-                            <i class="fas fa-plus toggle-icon"></i>
-                        </div>
-                        <div class="collapsible-content"
-                            style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease; padding-left: 0.25rem;">
                             <p class="date" style="margin: 0.75rem 0 0.25rem; font-weight: 500;">October 20, 2022</p>
                             <p style="margin: 0;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui
-                                mauris. Vivamus hendrerit arcu sed erat molestie vehicula.</p>
+                                mauris.</p>
                         </div>
-                    </div>
 
+                    </div>
                 </div>
             </div>
         </section>
+
 
 
         <!-- About Section -->
@@ -304,23 +298,25 @@
                 });
             }
 
-            // Collapsible publication items
-            const headers = document.querySelectorAll('.collapsible-header');
-            headers.forEach(header => {
-                header.addEventListener('click', function () {
-                    const icon = this.querySelector('.toggle-icon');
-                    const content = this.nextElementSibling;
+            const archiveHeader = document.querySelector('.archive-header');
+            const archiveContent = document.getElementById('archiveContent');
+            const archiveIcon = document.querySelector('.archive-toggle-icon');
 
-                    if (content.style.maxHeight && content.style.maxHeight !== "0px") {
-                        content.style.maxHeight = null;
-                        icon.classList.remove('fa-minus');
-                        icon.classList.add('fa-plus');
-                    } else {
-                        content.style.maxHeight = content.scrollHeight + "px";
-                        icon.classList.remove('fa-plus');
-                        icon.classList.add('fa-minus');
-                    }
-                });
+            let isOpen = false;
+
+            archiveHeader.addEventListener('click', () => {
+                isOpen = !isOpen;
+
+                if (isOpen) {
+                    const scrollHeight = archiveContent.scrollHeight;
+                    archiveContent.style.maxHeight = scrollHeight + "px";
+                    archiveIcon.classList.remove('fa-plus');
+                    archiveIcon.classList.add('fa-minus');
+                } else {
+                    archiveContent.style.maxHeight = 0;
+                    archiveIcon.classList.remove('fa-minus');
+                    archiveIcon.classList.add('fa-plus');
+                }
             });
         });
     </script>
