@@ -1,10 +1,4 @@
-/* 
-* Main Stylesheet for Academic Lab Website
-* Version: 2.0
-* Description: Responsive design for academic research lab website
-*/
 
-/* ===== GLOBAL STYLES ===== */
 * {
   margin: 0;
   padding: 0;
@@ -98,9 +92,30 @@ a:hover {
   bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
-  width: 140px;
+  width: 210px;
   height: 3px;
   background-color: var(--accent-color);
+  border-radius: 2px;
+}
+
+.section-title:before,
+.section-title .circle-end {
+  content: "";
+  position: absolute;
+  bottom: -14px;
+  width: 12px;
+  height: 12px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+}
+
+.section-title:before {
+  left: calc(50% - 105px - 6px);
+}
+
+
+.section-title .circle-end {
+  right: calc(50% - 105px - 6px);
 }
 
 .section-subtitle {
@@ -270,10 +285,12 @@ nav ul li a.active::after {
 /* ===== MAIN CONTENT ===== */
 main {
   padding: 90px 0;
+  padding-bottom: 10px;
 }
 
 .section {
   padding: 30px 0;
+
 }
 
 .section:nth-child(even) {
@@ -410,7 +427,6 @@ main {
   border-radius: 10px;
   box-shadow: var(--shadow);
   padding: 30px;
-  margin-bottom: 30px;
 }
 
 .publication-item {
@@ -606,6 +622,44 @@ main {
   text-decoration: underline;
 }
 
+.additional-news {
+  margin-top: 10px;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 25px 0px;
+  border-radius: 9px;
+  color: #1a1a1a;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.news-item {
+  background-color: #ffffff;
+  border-left: 6px solid #003366;
+  padding: 15px 20px;
+  margin-bottom: 18px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px #0033661f;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.news-item strong {
+  color: #003366;
+}
+
+.news-item:last-child {
+  margin-bottom: 0;
+}
+
+.news-item:hover {
+  transform: translateX(4px);
+  box-shadow: 0 8px 20px #00336638;
+}
+
+
 /* ===== PROSPECTIVE STUDENTS ===== */
 .prospective-hero {
   height: 100vh;
@@ -703,14 +757,14 @@ main {
 /* ===== CONTACT SECTION ===== */
 .contact-info {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
   margin-top: 40px;
 }
 
 .contact-card {
-  background-color: #fff;
-  border-radius: 10px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
   box-shadow: var(--shadow);
   padding: 30px;
   text-align: center;
@@ -810,7 +864,7 @@ main {
 
 /* ===== SPONSORS SECTION ===== */
 .sponsors-section {
-  padding: 60px 0;
+  padding: 30px 0;
   background-color: #f8f9fa;
 }
 
@@ -828,33 +882,43 @@ main {
 
 .sponsors-track {
   display: flex;
-  animation: moveLeft 30s linear infinite;
-  width: fit-content;
+  align-items: center;
+  gap: 2rem;
+  animation: scroll 30s linear infinite;
+  width: max-content;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .sponsor-item {
-  flex: 0 0 200px;
-  margin: 0 40px;
-  text-align: center;
-  transition: var(--transition);
-}
-
-.sponsor-item:hover {
-  transform: scale(1.05);
+  width: 180px;
+  height: 100px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 .sponsor-item img {
   max-width: 100%;
-  height: auto;
-  filter: grayscale(100%);
-  opacity: 0.7;
-  transition: var(--transition);
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
 }
 
-.sponsor-item:hover img {
-  filter: grayscale(0);
-  opacity: 1;
-}
+
 
 /* ===== FOOTER ===== */
 footer {
@@ -1180,7 +1244,7 @@ footer {
   }
 
   .section-title {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 
   .section {
@@ -1330,67 +1394,61 @@ footer {
 
 /* Yearly Publications */
 .year-group {
-  margin: 20px 0;
-  background-color: rgb(247, 247, 247);
-  border-radius: 10px;
-  padding: 20px;
+  margin-bottom: 1.5rem;
+  border-radius: 6px;
+  background: #ffffff;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
 }
 
-.year-group h3 {
-  color: #003366;
-  /* border-bottom: 1px solid #003366; */
-  padding-bottom: 10px;
-  margin-bottom: 20px;
-}
-
-.publication-item {
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-
-.publication-header {
-  cursor: pointer;
-  padding: 15px 20px;
+.year-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #ffffff;
-  border-radius: 10px;
+  padding: 1rem;
+  padding-bottom: 0.5rem;
+  cursor: pointer;
+  background-color: #f5f5f5ea;
+  font-size: 1rem;
+}
+
+.year-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 1rem;
+    border: 1px solid var(--border-color);
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.year-group.active .year-content {
+  max-height: 1000px; 
+  padding: 1rem;
+}
+
+.year-header i {
+  font-size: 1rem;
+  transition: transform 0.2s;
+}
+
+.publication-item {
+  margin-bottom: 1.5rem;
 }
 
 .publication-header h3 {
-  margin: 0;
-  flex-grow: 1;
-  font-size: 1.3rem;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
 }
 
-.publication-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-  padding: 0 20px;
-}
-
-.publication-content.active {
-  max-height: 1000px;
-  padding: 20px;
-}
-
-.authors,
-.journal {
-  color: #666;
-  font-size: 0.9em;
-  margin: 5px 0;
+.publication-content p {
+  margin: 0.3rem 0;
 }
 
 .links a {
-  display: inline-block;
-  margin-right: 15px;
-  color: #003366;
+  margin-right: 1rem;
+  color: #007BFF;
   text-decoration: none;
 }
 
-.links i {
+.links a i {
   margin-right: 5px;
 }
