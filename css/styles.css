@@ -89,36 +89,31 @@ a:hover {
   color: var(--primary-color);
 }
 
-.section-title:after {
+.section-title::after {
   content: "";
   position: absolute;
   bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
-  width:300px;
+  width: 300px;
   height: 3px;
   background-color: var(--accent-color);
   border-radius: 2px;
 }
 
-.section-title:before,
-.section-title .circle-end {
+.section-title::before {
   content: "";
   position: absolute;
   bottom: -14px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 12px;
   height: 12px;
-  background-color: var(--accent-color);
   border-radius: 50%;
-}
-
-.section-title:before {
-  left: calc(50% - 155px - 6px);
-}
-
-
-.section-title .circle-end {
-  right: calc(50% - 105px - 6px);
+  background-color: transparent;
+  box-shadow:
+    -150px 0 0 0 var(--accent-color),
+     150px 0 0 0 var(--accent-color);
 }
 
 .section-subtitle {
@@ -1264,6 +1259,14 @@ footer {
   .news-grid,
   .featured-publications {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .postdocs-grid{
+    flex-direction: column;
+  }
+
+  .postdocs-container{
+    margin-left: 0 !important;
   }
 }
 
